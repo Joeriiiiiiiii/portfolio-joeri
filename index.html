@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Responsive portfolio website voor een grafisch vormgever en creative designer."
+    />
+    <title>Creative Designer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body class="is-loading">
+    <div class="preloader" aria-label="Website wordt geladen">
+      <div class="preloader__mark">JD</div>
+      <div class="preloader__line"></div>
+      <p>Creative Designer</p>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <div class="ambient" aria-hidden="true">
+      <canvas id="particle-canvas"></canvas>
+      <div class="ambient__grid"></div>
+      <div class="ambient__spotlight"></div>
+      <div class="ambient__noise"></div>
+      <div class="ambient__beam ambient__beam--one"></div>
+      <div class="ambient__beam ambient__beam--two"></div>
+      <div class="floating-shape floating-shape--one"></div>
+      <div class="floating-shape floating-shape--two"></div>
+      <div class="floating-shape floating-shape--three"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <nav class="nav" aria-label="Hoofdnavigatie">
+        <a class="brand magnetic" href="#top" aria-label="Naar boven">
+          <span>J</span><span>D</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Menu openen"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="site-menu">
+          <a href="#about">Over</a>
+          <a href="#portfolio">Werk</a>
+          <a href="#skills">Skills</a>
+          <a href="#process">Werkwijze</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal>Portfolio 2026</p>
+          <h1 class="hero__title split-title" data-split>Creative Designer</h1>
+          <p class="hero__text" data-reveal>
+            Welkom op mijn portfolio. Hier vind je een selectie van mijn
+            projecten op het gebied van mediavormgeving. Ontdek mijn werk,
+            vaardigheden en creatieve aanpak.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--primary magnetic" href="#portfolio">
+              <span>Bekijk mijn werk</span>
+            </a>
+            <a class="btn btn--ghost magnetic" href="#contact">
+              <span>Neem contact op</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal data-parallax>
+          <div class="portrait-shell">
+            <div class="portrait-frame">
+              <img
+                src="images/profile.png?v=hair-fixed"
+                alt="Portret van de creative designer"
+              />
+            </div>
+            <div class="portrait-line portrait-line--one"></div>
+            <div class="portrait-line portrait-line--two"></div>
+          </div>
+        </div>
+
+        <p class="hero__background-text" aria-hidden="true">DESIGN</p>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-header" data-reveal>
+          <p class="eyebrow">Over mij</p>
+          <h2>Over mij</h2>
+        </div>
+        <div class="about__layout">
+          <div class="about__copy" data-reveal>
+            <p>
+              Hoi! Mijn naam is Joeri de Hoon en ik volg de opleiding
+              Mediavormgeving. Op deze website laat ik mijn portfolio zien: een
+              verzameling van projecten waar ik tijdens mijn opleiding aan heb
+              gewerkt en waar ik trots op ben.
+            </p>
+            <p>
+              Ik vind het leuk om creatieve ideeën om te zetten in aantrekkelijke
+              en gebruiksvriendelijke ontwerpen. Tijdens mijn opleiding heb ik
+              ervaring opgedaan met verschillende vormen van vormgeving, zoals
+              branding, webdesign, grafisch ontwerp en digitale media. Met ieder
+              project blijf ik mezelf ontwikkelen en leer ik nieuwe technieken.
+            </p>
+            <p>
+              Met dit portfolio wil ik laten zien wie ik ben, wat ik kan en hoe
+              ik werk. Ik ben op zoek naar een stageplek en toekomstige
+              werkmogelijkheden waar ik mijn creativiteit en vaardigheden verder
+              kan ontwikkelen. Neem gerust een kijkje tussen mijn projecten. Ik
+              kom graag in contact om mijn passie voor mediavormgeving verder toe
+              te lichten.
+            </p>
+          </div>
+          <div class="about__image" data-reveal>
+            <img src="images/profile.png?v=hair-fixed" alt="Creative designer profielbeeld" />
+          </div>
+        </div>
+        <div class="stats-grid" data-reveal>
+          <article class="stat" data-count="5" data-suffix="+">
+            <strong>0</strong>
+            <span>Jaar ervaring</span>
+          </article>
+          <article class="stat" data-count="50" data-suffix="+">
+            <strong>0</strong>
+            <span>Projecten</span>
+          </article>
+          <article class="stat" data-count="15" data-suffix="+">
+            <strong>0</strong>
+            <span>Tevreden werkgevers</span>
+          </article>
+          <article class="stat" data-count="100" data-suffix="%">
+            <strong>0</strong>
+            <span>Creativiteit</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section portfolio" id="portfolio">
+        <div class="section-header section-header--wide" data-reveal>
+          <p class="eyebrow">Portfolio</p>
+          <h2>Een logische selectie opdrachten met ruimte voor beeld en verhaal.</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="project-card" tabindex="0" role="button" data-project="0" data-reveal>
+            <figure>
+              <img src="images/toyota-brochure/page-01.png" alt="Cover van de Toyota brochure" />
+            </figure>
+            <div class="project-card__content">
+              <span>Grafisch ontwerp</span>
+              <h3>Toyota brochure</h3>
+              <p>Een informatieve brochure over Toyota, historie, productie en kwaliteit.</p>
+              <b>Bekijk project</b>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" data-project="1" data-reveal>
+            <figure>
+              <img class="project-card__poster" src="images/hopke-merk/banner.png" alt="Banner voor biermerk Hopke" />
+            </figure>
+            <div class="project-card__content">
+              <span>Merkidentiteit</span>
+              <h3>Biermerk ontwerp</h3>
+              <p>Een complete identiteit voor het zelfbedachte biermerk Hopke.</p>
+              <b>Bekijk project</b>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" data-project="2" data-reveal>
+            <figure>
+              <img src="images/make-your-sign-handboek/beeldmerk-card.png" alt="Beeldmerk van Make Your Sign" />
+            </figure>
+            <div class="project-card__content">
+              <span>Corporate Identity</span>
+              <h3>Huisstijlhand-boek</h3>
+              <p>Richtlijnen voor logo, kleurgebruik en typografie tijdens mijn stage.</p>
+              <b>Bekijk project</b>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="section-header" data-reveal>
+          <p class="eyebrow">Skills</p>
+          <h2>Mijn ervaring met deze programma's.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill" data-level="96" data-reveal>
+            <span>Illustrator</span><b>96%</b><i></i>
+          </article>
+          <article class="skill" data-level="89" data-reveal>
+            <span>Photoshop</span><b>89%</b><i></i>
+          </article>
+          <article class="skill" data-level="81" data-reveal>
+            <span>InDesign</span><b>81%</b><i></i>
+          </article>
+          <article class="skill" data-level="76" data-reveal>
+            <span>Figma</span><b>76%</b><i></i>
+          </article>
+          <article class="skill" data-level="73" data-reveal>
+            <span>Excel</span><b>73%</b><i></i>
+          </article>
+          <article class="skill" data-level="68" data-reveal>
+            <span>Premiere</span><b>68%</b><i></i>
+          </article>
+          <article class="skill" data-level="65" data-reveal>
+            <span>HTML</span><b>65%</b><i></i>
+          </article>
+          <article class="skill" data-level="60" data-reveal>
+            <span>CSS</span><b>60%</b><i></i>
+          </article>
+          <article class="skill" data-level="58" data-reveal>
+            <span>JavaScript</span><b>58%</b><i></i>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process" id="process">
+        <div class="section-header section-header--wide" data-reveal>
+          <p class="eyebrow">Werkwijze</p>
+          <h2>Van abstracte richting naar een helder visueel systeem.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item" data-reveal>
+            <span>01</span>
+            <h3>Onderzoek</h3>
+            <p>We starten met een grondig onderzoek naar de doelgroep en wensen. Zo leggen we een sterke basis voor een doordacht ontwerp.</p>
+          </article>
+          <article class="timeline__item" data-reveal>
+            <span>02</span>
+            <h3>Concept</h3>
+            <p>Op basis van het onderzoek ontwikkelen we een creatief concept. Hier bepalen we de richting, uitstraling en boodschap van het ontwerp.</p>
+          </article>
+          <article class="timeline__item" data-reveal>
+            <span>03</span>
+            <h3>Design</h3>
+            <p>Het concept wordt uitgewerkt tot een visueel ontwerp. We zorgen voor een passende vormgeving die aansluit bij jouw wensen en doelgroep.</p>
+          </article>
+          <article class="timeline__item" data-reveal>
+            <span>04</span>
+            <h3>Uitwerking</h3>
+            <p>Het definitieve ontwerp wordt technisch uitgewerkt en tot in detail verfijnd. </p>
+          </article>
+          <article class="timeline__item" data-reveal>
+            <span>05</span>
+            <h3>Oplevering</h3>
+            <p>Na de laatste controles leveren we het eindresultaat op in de juiste bestanden.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section testimonials" id="testimonials">
+        <div class="section-header" data-reveal>
+          <p class="eyebrow">Reviews</p>
+          <h2>Woorden van opdrachtgevers met gevoel voor detail.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial" data-reveal>
+            <p>
+              Joeri heeft tijdens zijn stage laten zien dat hij creatief, leergierig en gemotiveerd is. Hij werkt nauwkeurig, pakt feedback goed op en levert verzorgd werk af. We hebben de samenwerking als prettig ervaren en wensen hem veel succes in zijn verdere carrière.
+            </p>
+            <span>MakeYourSign</span>
+          </article>
+          <article class="testimonial" data-reveal>
+            <p>
+              Joeri is een enthousiaste en betrouwbare medewerker die altijd klaarstaat om aan de slag te gaan. Hij werkt nauwkeurig, leert snel en was een fijne collega om mee samen te werken. We kijken met plezier terug op de samenwerking.
+            </p>
+            <span>FemkeReuvers</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact__copy" data-reveal>
+          <p class="eyebrow">Contact</p>
+          <h2>Neem contact met mij op.</h2>
+          <p>
+            Wil je meer weten over mijn portfolio, stage-ervaring of beschikbaarheid? Je kunt mij rechtstreeks bereiken via mail of telefoon.
+          </p>
+        </div>
+
+        <div class="contact-card" data-reveal>
+          <article class="contact-method">
+            <span>Email</span>
+            <a href="mailto:joeridehoon@ziggo.nl">joeridehoon@ziggo.nl</a>
+          </article>
+          <article class="contact-method">
+            <span>Telefoon</span>
+            <a href="tel:+31640181301">06 40181301</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#top" aria-label="Naar boven"><span>J</span><span>D</span></a>
+      <p>&copy; 2026 Creative Designer. Alle rechten voorbehouden.</p>
+      <div class="footer__links">
+        <a href="#portfolio">Werk</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+
+    <div class="project-modal" id="project-modal" aria-hidden="true">
+      <button
+        class="project-modal__backdrop"
+        type="button"
+        data-close-modal
+        aria-label="Project sluiten"
+      ></button>
+      <article
+        class="project-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button class="project-modal__close magnetic" type="button" data-close-modal>
+          <span>Terug</span>
+        </button>
+        <figure class="project-modal__hero">
+          <div class="project-modal__book">
+            <div class="project-modal__spread" id="modal-spread">
+              <img id="modal-image" src="images/project1.jpg" alt="" />
+              <img id="modal-image-next" src="images/project2.jpg" alt="" hidden />
+            </div>
+          </div>
+          <div class="project-modal__zoom-controls" aria-label="Zoom bediening">
+            <button class="magnetic" type="button" data-zoom-in aria-label="Afbeelding vergroten">
+              +
+            </button>
+            <button class="magnetic" type="button" data-zoom-reset aria-label="Zoom resetten">
+              <span id="modal-zoom">100%</span>
+            </button>
+            <button class="magnetic" type="button" data-zoom-out aria-label="Afbeelding verkleinen">
+              -
+            </button>
+          </div>
+          <div class="project-modal__controls" aria-label="Project afbeeldingen">
+            <button class="magnetic" type="button" data-prev-image aria-label="Vorige afbeelding">
+              &larr;
+            </button>
+            <span id="modal-counter">1 / 3</span>
+            <button class="magnetic" type="button" data-next-image aria-label="Volgende afbeelding">
+              &rarr;
+            </button>
+          </div>
+        </figure>
+        <div class="project-modal__content">
+          <p class="eyebrow" id="modal-category">Brand Identity</p>
+          <h2 id="modal-title">Electric Studio</h2>
+          <div class="project-meta">
+            <span>Software</span>
+            <p id="modal-software">Photoshop, Illustrator, Figma</p>
+          </div>
+          <p id="modal-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <div class="project-info" id="modal-info"></div>
+          <div class="modal-gallery" id="modal-gallery"></div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
